@@ -8,3 +8,20 @@ player.on('play', function () {
 player.getVideoTitle().then(function (title) {
   console.log('title:', title);
 });
+player
+  .getCurrentTime()
+  .then(function (seconds) {
+    // seconds = the current playback position
+  })
+  .catch(function (error) {
+    // an error occurred
+  });
+//
+player
+  .getCurrentTime()
+  .then(function (seconds) {
+    localStorage.setItem(this.seconds);
+  })
+  .catch(function (error) {
+    // an error occurred
+  });
