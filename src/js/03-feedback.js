@@ -1,7 +1,5 @@
 const form = document.querySelector('.feedback-form');
 const localStorageKey = 'goit-example-message';
-const input = document.querySelector('name');
-const textArea = document.querySelector('email');
 
 form.elements.email.value = localStorage.getItem(localStorageKey) ?? '';
 form.addEventListener('input', evt => {
@@ -17,8 +15,8 @@ form.addEventListener('submit', evt => {
 try {
   const parsedData = JSON.parse(localStorage.getItem('feedback-form-state'));
   if (parsedData.email !== '' && parsedData.message !== '') {
-    emailInput.value = parsedData.email;
-    messageInput.value = parsedData.message;
+    email.Input.value = parsedData.email;
+    message.Input.value = parsedData.message;
   } else {
   }
 } catch (error) {
